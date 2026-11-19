@@ -1,0 +1,336 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Essential Meta Tags for Cross-Browser & Mobile Rendering -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>A to Z Interiors | Luxury End-to-End Interior Design & Turnkey Solutions</title>
+  <meta name="description" content="A to Z Interiors offers complete end-to-end luxury interior design solutions — from 3D concept planning and modular kitchens to turnkey home and commercial interiors across India." />
+  <meta name="keywords" content="A to Z Interiors, luxury interior design, turnkey interior solutions, modular kitchen, home interiors, office interior design, 3D interior planning, interior cost estimator" />
+  <meta name="author" content="A to Z Interiors" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#121212" />
+
+  <!-- Open Graph / Social Sharing Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="A to Z Interiors — Complete End-to-End Interior Solutions" />
+  <meta property="og:description" content="From Concept to Reality. Bespoke residential, modular kitchen, and commercial interior architecture with transparent turnkey execution." />
+  <meta property="og:site_name" content="A to Z Interiors" />
+
+  <!-- Structured Data (JSON-LD) for Search Engine Visibility -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "A to Z Interiors",
+    "description": "Complete End-to-End Interior Solutions — From Concept to Reality. Residential, Modular Kitchens, Commercial Offices, and Turnkey Renovation.",
+    "priceRange": "₹₹₹",
+    "telephone": "+91-98765-43210",
+    "email": "studio@atozinteriors.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Suite 402, Aurelia Design Galleria, MG Road",
+      "addressLocality": "New Delhi",
+      "addressRegion": "Delhi",
+      "postalCode": "110001",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "19:30"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Cormorant Garamond (Luxury Serif) & Inter (Crisp Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Brand Palette & Typography Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: {
+              DEFAULT: '#121212',
+              elevated: '#1A1A1A',
+              card: '#1E1E1E',
+              border: '#2C2C2C'
+            },
+            gold: {
+              DEFAULT: '#C5A059',
+              light: '#DFBE7A',
+              dark: '#9E7D3E'
+            },
+            ivory: {
+              DEFAULT: '#F5F5F0',
+              muted: '#B5B5AE'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-charcoal text-ivory font-sans antialiased selection:bg-gold selection:text-charcoal overflow-x-hidden">
+
+  <!-- =====================================================================
+       1. RESPONSIVE STICKY NAVIGATION BAR
+       ===================================================================== -->
+  <header id="navbar" class="sticky top-0 z-40 w-full bg-charcoal/95 backdrop-blur-md border-b border-charcoal-border transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main Navigation">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#home" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-lg p-1">
+          <div class="w-10 h-10 rounded-lg border border-gold/60 bg-charcoal-elevated flex items-center justify-center group-hover:border-gold group-hover:bg-gold/10 transition-colors">
+            <svg class="w-6 h-6 text-gold" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <path d="M5 26L14 6L20 20" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.5 18.5H17.5" stroke-linecap="round" />
+              <path d="M16 10H27L17 26H27" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-ivory leading-none">
+              A to Z <span class="text-gold">Interiors</span>
+            </span>
+            <span class="text-[10px] uppercase tracking-[0.22em] text-ivory-muted mt-1">
+              Luxury Design Studio
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="nav-link text-sm font-medium text-ivory hover:text-gold transition-colors py-2">Home</a>
+          <a href="#services" class="nav-link text-sm font-medium text-ivory-muted hover:text-gold transition-colors py-2">Services</a>
+          <a href="#portfolio" class="nav-link text-sm font-medium text-ivory-muted hover:text-gold transition-colors py-2">Portfolio</a>
+          <a href="#estimator" class="nav-link text-sm font-medium text-ivory-muted hover:text-gold transition-colors py-2">Estimator</a>
+          <a href="#contact" class="nav-link text-sm font-medium text-ivory-muted hover:text-gold transition-colors py-2">Contact</a>
+        </div>
+
+        <!-- Desktop Action CTA -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-gold text-charcoal font-semibold text-sm hover:bg-gold-light transition-all shadow-lg shadow-gold/10">
+            Free Consultation
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden">
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Toggle Navigation Menu"
+            class="inline-flex items-center justify-center p-2.5 rounded-lg text-ivory hover:text-gold hover:bg-charcoal-elevated border border-charcoal-border focus:outline-none focus:ring-2 focus:ring-gold transition-colors"
+          >
+            <svg id="menu-icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-5 pt-2 border-t border-charcoal-border space-y-1">
+        <a href="#home" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-ivory hover:bg-charcoal-elevated hover:text-gold transition-colors">Home</a>
+        <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-ivory-muted hover:bg-charcoal-elevated hover:text-gold transition-colors">Services</a>
+        <a href="#portfolio" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-ivory-muted hover:bg-charcoal-elevated hover:text-gold transition-colors">Portfolio</a>
+        <a href="#estimator" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-ivory-muted hover:bg-charcoal-elevated hover:text-gold transition-colors">Instant Cost Estimator</a>
+        <a href="#contact" class="mobile-nav-link block px-4 py-3 rounded-lg text-base font-medium text-ivory-muted hover:bg-charcoal-elevated hover:text-gold transition-colors">Contact</a>
+        <div class="pt-3 px-2">
+          <a href="#contact" class="mobile-nav-link block w-full text-center px-5 py-3 rounded-lg bg-gold text-charcoal font-semibold text-base hover:bg-gold-light transition-colors">
+            Book Free Consultation
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+         2. FULL-WIDTH HERO SECTION
+         ===================================================================== -->
+    <section id="home" class="relative min-h-[88vh] flex items-center overflow-hidden border-b border-charcoal-border">
+      <!-- Background Architectural Image with Graceful Fallback Gradient -->
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-[#1B1813] via-charcoal to-[#0D0D0D]">
+        <img
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=85"
+          alt="Luxury contemporary dark charcoal and warm gold living room designed by A to Z Interiors"
+          class="w-full h-full object-cover object-center opacity-35 scale-105 transition-transform duration-1000"
+          onerror="this.style.display='none'"
+        />
+        <!-- Layered Luxury Vignette Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/85 to-charcoal/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/40"></div>
+      </div>
+
+      <!-- Hero Content Container -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 w-full">
+        <div class="max-w-3xl">
+          <!-- Eyebrow Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-charcoal-elevated/90 border border-gold/40 mb-6">
+            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+            <span class="text-xs sm:text-sm font-medium uppercase tracking-[0.18em] text-gold">
+              Bespoke Architecture &amp; Turnkey Interiors
+            </span>
+          </div>
+
+          <!-- Primary Headline & Mandatory Tagline -->
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ivory leading-[1.12] tracking-tight">
+            Complete End-to-End Interior Solutions — <span class="text-gold italic font-semibold">From Concept to Reality</span>
+          </h1>
+
+          <p class="mt-6 text-base sm:text-lg text-ivory-muted leading-relaxed max-w-2xl">
+            At <strong class="text-ivory font-medium">A to Z Interiors</strong>, we craft timeless residences, precision modular kitchens, and flagship workspaces with transparent pricing, 3D visualization, and single-point turnkey execution.
+          </p>
+
+          <!-- Primary & Secondary CTA Buttons -->
+          <div class="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a
+              href="#estimator"
+              class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-gold text-charcoal font-semibold text-base hover:bg-gold-light transition-all shadow-xl shadow-gold/15"
+            >
+              <span>Calculate Instant Estimate</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a
+              href="#portfolio"
+              class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-charcoal-elevated/90 text-ivory border border-gold/40 hover:border-gold hover:bg-charcoal-card font-medium text-base transition-all"
+            >
+              <span>Explore Our Portfolio</span>
+            </a>
+          </div>
+
+          <!-- Key Trust Metrics Bar -->
+          <div class="mt-14 pt-8 border-t border-charcoal-border/80 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl">
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-gold">450+</p>
+              <p class="text-xs sm:text-sm text-ivory-muted mt-1">Turnkey Spaces Delivered</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-gold">45 Days</p>
+              <p class="text-xs sm:text-sm text-ivory-muted mt-1">Assured Handover Timeline</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-gold">10 Years</p>
+              <p class="text-xs sm:text-sm text-ivory-muted mt-1">Structural &amp; Modular Warranty</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. 'OUR SERVICES' SECTION (6 COMPREHENSIVE CARDS)
+         ===================================================================== -->
+    <section id="services" class="scroll-mt-20 py-20 sm:py-28 bg-charcoal border-b border-charcoal-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-2xl">
+          <span class="text-xs font-semibold uppercase tracking-[0.22em] text-gold">What We Do</span>
+          <h2 class="mt-2 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ivory">
+            Our Signature Interior Services
+          </h2>
+          <p class="mt-4 text-ivory-muted text-base sm:text-lg leading-relaxed">
+            Every detail managed under one roof—combining architectural rigor, factory-finished precision, and curated luxury materials.
+          </p>
+        </div>
+
+        <!-- 6-Card Responsive Grid -->
+        <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Service 1: Full Home Interiors -->
+          <article class="group rounded-2xl bg-charcoal-elevated border border-charcoal-border hover:border-gold/60 p-7 sm:p-8 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-charcoal border border-gold/30 group-hover:border-gold group-hover:bg-gold/10 flex items-center justify-center text-gold transition-colors">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1v-9.5z" />
+                </svg>
+              </div>
+              <h3 class="mt-6 font-serif text-2xl font-semibold text-ivory group-hover:text-gold transition-colors">
+                Full Home Interiors
+              </h3>
+              <p class="mt-3 text-sm sm:text-base text-ivory-muted leading-relaxed">
+                Cohesive spatial design for apartments, penthouses, and villas—covering living lounges, bedrooms, false ceilings, lighting, wall paneling, and soft furnishings.
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-charcoal-border flex items-center justify-between">
+              <span class="text-xs uppercase tracking-wider text-gold font-medium">1 BHK to Luxury Villas</span>
+              <button type="button" onclick="selectServiceInquiry('Full Home Interiors')" class="text-sm font-medium text-ivory hover:text-gold inline-flex items-center gap-1.5 transition-colors">
+                <span>Inquire</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 2: Modular Kitchens -->
+          <article class="group rounded-2xl bg-charcoal-elevated border border-charcoal-border hover:border-gold/60 p-7 sm:p-8 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-charcoal border border-gold/30 group-hover:border-gold group-hover:bg-gold/10 flex items-center justify-center text-gold transition-colors">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm0 6h16M9 5v14m6-8v8" />
+                </svg>
+              </div>
+              <h3 class="mt-6 font-serif text-2xl font-semibold text-ivory group-hover:text-gold transition-colors">
+                Modular Kitchens
+              </h3>
+              <p class="mt-3 text-sm sm:text-base text-ivory-muted leading-relaxed">
+                Ergonomic L-shaped, U-shaped, parallel, and island kitchens crafted with BWP marine ply, German soft-close hardware, quartz countertops, and seamless appliance integration.
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-charcoal-border flex items-center justify-between">
+              <span class="text-xs uppercase tracking-wider text-gold font-medium">Anti-Scratch &amp; Waterproof</span>
+              <button type="button" onclick="selectServiceInquiry('Modular Kitchens')" class="text-sm font-medium text-ivory hover:text-gold inline-flex items-center gap-1.5 transition-colors">
+                <span>Inquire</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 3: Office & Commercial -->
+          <article class="group rounded-2xl bg-charcoal-elevated border border-charcoal-border hover:border-gold/60 p-7 sm:p-8 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-charcoal border border-gold/30 group-hover:border-gold group-hover:bg-gold/10 flex items-center justify-center text-gold transition-colors">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 10h2m2 0h2M9 14h2m2 0h2" />
+                </svg>
+              </div>
+              <h3 class="mt-6 font-serif text-2xl font-semibold text-ivory group-hover:text-gold transition-colors">
+                Office &amp; Commercial
+              </h3>
+              <p class="mt-3 text-sm sm:text-base text-ivory-muted leading-relaxed">
+                High-performance corporate offices, executive boardrooms, luxury retail boutiques, and hospitality lounges engineered for acoustics, brand prestige, and productivity.
+              </p>
+            </div>
+            <div class="mt-6 pt-5 border-t border-charcoal-border flex items-center justify-between">
+              <span class="text-xs uppercase tracking-wider text-gold font-medium">Workspaces &amp; Retail</span>
+              <button type="button" onclick="selectServiceInquiry('Office & Commercial')" class="text-sm font-medium text-ivory hover:text-gold inline-flex items-center gap-1.5 transition-colors">
+                <span>Inquire</span>
+                <span aria-hidden="true">&rarr;</sp
